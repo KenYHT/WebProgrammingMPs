@@ -1,0 +1,14 @@
+<div ng-controller="galleryController" id="gallery-container">
+	<div id="genre-list">
+		<ul class="button-group" id="genre-group">
+			<li ng-repeat="genre in genres"><a class="button small" ng-click="setGenre(genre)">{{ genre }}</a></li>
+		</ul>
+	</div>
+	<div id="movie-gallery">
+		<ul class="large-block-grid-7" id="gallery">
+			<li class="reveal-animation" ng-repeat="movie in movies | filter: currGenre">
+				<img ng-click="getDetails(movie.rank)" class="gallery-img" src="data/images/{{ movie.imdbID }}.jpg" />
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<div class="list" ng-controller="TasksController">
+  <form data-abide id="add-tasks-form">
+    <div class="row">
+      <div class="large-12 column">
+        <label>Name<small>required</small>
+          <input type="text" ng-model="detailsTask.name" required/>
+        </label>
+        <label>Description
+          <input type="text" ng-model="detailsTask.description"/>
+        </label>
+        <label>Deadline<small>required</small>
+          <datepicker>
+            <input type="text" ng-model="detailsTask.deadline" required/>
+          </datepicker>
+        </label>
+        <label>Assigned User
+          <select ng-model="assignedUser" ng-options="user as user.name for user in users"></select>
+        </label>
+        <label>Completed
+          <input type="radio" name="completed" ng-value="true" ng-model="detailsTask.completed" id="yes"><label for="yes">Yes</label>
+          <input type="radio" name="completed" ng-value="false" ng-model="detailsTask.completed" id="no"><label for="no">No</label>
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 column">
+        <a id="user-add-submit" class="button small" ng-click="editTask()">Submit</a>
+      </div>
+    </div>
+    <p id="user-status" ng-bind="status">{{ status }}</p>
+  </form>
+</div>

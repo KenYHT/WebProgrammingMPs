@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Competitive Dota 2</title>
+  <script src="./lib/angular/angular.min.js"></script>
+  <script src="./js/controllers.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./foundation/css/foundation.css">
+  <link rel="icon" type="image/png" href="data/img/favicon.ico">
+</head>
+<body>
+  <nav data-magellan-expedition="fixed" id="nav">
+	  <dl class="sub-nav">
+      <dd data-magellan-arrival="intro"><a href="#intro" class="nav-link">INTRO</a></dd>
+      <dd data-magellan-arrival="screenshots"><a href="#screenshots" class="nav-link">SCREENSHOTS</a></dd>
+      <dd data-magellan-arrival="trailer"><a href="#trailer" class="nav-link">TRAILER</a></dd>
+      <dd data-magellan-arrival="connect"><a href="#connect" class="nav-link">CONNECT</a></dd>
+	  </dl>
+  </nav>
+  <a name="intro"></a>
+  <section data-magellan-destination="intro" id="sec1">
+    <ul id="facts-container" class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
+      <li class="fact">
+        <i class="fa fa-gamepad fa-5x"></i>
+        <p>There are currently more than 80 notable professional Dota 2 teams worldwide.</p>
+      </li>
+      <li class="fact">
+        <i class="fa fa-money fa-5x"></i>
+        <p>The International 4 had a total prize pool of $10,930,698.</p>
+      </li>
+      <li class="fact">
+        <i class="fa fa-eye fa-5x"></i>
+        <p>More than 20 million unique viewers tuned into The International 4.</p>
+      </li>
+    </ul>
+  </section>
+  <a name="screenshots"></a>
+  <section data-magellan-destination="screenshots" id="sec2">
+    <ul id="carousel" data-orbit>
+      <li>
+        <img class="coursel-img" src="data/img/img1.jpg"/>
+        <div class="carousel-caption"></div>
+      </li>
+      <li>
+        <img class="coursel-img" src="data/img/img2.png"/>
+        <div class="carousel-caption"></div>
+      </li><li>
+        <img class="coursel-img" src="data/img/img3.jpg"/>
+        <div class="carousel-caption"></div>
+      </li>
+      <li>
+        <img class="coursel-img" src="data/img/img4.jpg"/>
+        <div class="carousel-caption"></div>
+      </li>
+      <li>
+        <img class="coursel-img" src="data/img/img5.jpg"/>
+        <div class="carousel-caption"></div>
+      </li>
+      <li>
+        <img class="coursel-img" src="data/img/img6.jpg"/>
+        <div class="carousel-caption"></div>
+      </li>
+    </ul>
+  </section>
+  <a name="trailer"></a>
+  <section data-magellan-destination="trailer" id="sec3">
+    <div id="trailer-container">
+      <h1 id="sec3-title">Dota 2 Asia Championships</h1>
+      <div id="video-button" href="#" data-reveal-id="videoModal" class="button large">
+        <i class="fa fa-video-camera"></i>Click To See The Trailer
+      </div>
+    </div>
+    <div id="videoModal" class="reveal-modal large" data-reveal="">
+      <div class="flex-video widescreen vimeo" style="display: block;">
+        <video id="video" class="hidden" width="1280" height="720" controls>
+          <source src="data/vid/video1.mp4" type="video/mp4" />
+          <source src="data/vid/video1.webm" type="video/webm" />
+        </video>
+      </div>
+    </div>
+  </section>
+  <a name="connect"></a>
+  <section data-magellan-destination="connect" id="sec4">
+      <ul id="social-list" class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+        <li class="social-container">
+          <a href="https://www.facebook.com/dota2"><img src="data/img/fb_icon.png"/></a>
+        </li>
+        <li class="social-container">
+          <a href="https://www.twitter.com/dota2"><img src="data/img/tw_icon.png"/></a>
+        </li>
+        <li class="social-container">
+          <a href="https://plus.google.com/communities/109910256862073456955"><img src="data/img/gp_icon.png"/></a>
+        </li>
+        <li class="social-container">
+          <a href="https://www.linkedin.com/groups/DotA2-Discussion-Forum-8222541"><img src="data/img/li_icon.png"/></a>
+        </li>
+      </ul>
+  </section>
+  <script src="./lib/jquery-2.1.3.min/index.js"></script>
+  <script src="./foundation/js/foundation.min.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
+  <script src="./js/script.js"></script>
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+  overflow-x: hidden;
+}
+
+#title {
+	text-align: center;
+  margin: 0 auto;
+}
+
+#links {
+  text-align: center;
+}
+
+.list-img {
+	width: 200px;
+  float: left;
+}
+
+.list-movie {
+  display: table-row;
+  margin-bottom: 10px;
+}
+
+.list-movie:hover {
+  cursor: pointer;
+  -webkit-transition: opacity 1s, background-color 1s;
+  transition: opacity 1s, background-color 1s;
+  opacity: 0.8;
+  background-color: #BBBFC0; 
+}
+
+#movie-container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+  height: 500px;
+  padding: 20px;
+}
+
+#detail-img {
+  width: 90%;
+}
+
+#detail-img-container {
+  float: left;
+  width: 30%;
+}
+
+#title-container {
+  clear: both;
+}
+
+.details {
+  clear: both;
+}
+
+#details-left {
+  margin-left: 10px;
+}
+
+#details-right {
+  margin-right: 10px;
+  float: right;
+}
+
+#details-container {
+  float: left;
+  width: 70%;
+}
+
+#list-container {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #ecf0f1;
+}
+
+#genre-group {
+  text-align: center;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.gallery-img:hover {
+  cursor: pointer;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0.8;
+}
+
+#gallery {
+  text-align: center;
+}
+
+/**
+ * Basically taken from the Angular documentation
+ */
+.reveal-animation.ng-enter {
+  -webkit-transition: 1s linear all;
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}

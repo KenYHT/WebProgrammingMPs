@@ -1,0 +1,17 @@
+@mixin vertically-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin title {
+  font-size: 75px;
+  font-family: "sans-serif" !important;
+  font-weight: lighter;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  left: 0;
+  right: 0;
+  color: white;
+  opacity: 0.9;
+}

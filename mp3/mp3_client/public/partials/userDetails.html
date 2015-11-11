@@ -1,0 +1,43 @@
+<div class="list" ng-controller='UsersController'>
+  <div id="user-header">
+    <ul class="small-block-grid-1">
+      <li>
+        <h1 id="user-title">User Profile</h1>
+        <h4 id="user-desc">it's kinda like Facebook but like not really</h4>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="small-block-grid-2">
+    <li><h3>{{ detailsUser.name }}</h3></li>
+    <li><h3>{{ detailsUser.email }}</h3></li>
+  </ul>  
+
+  <ul class="small-block-grid-1">
+    <li><h3>Pending Tasks</h3></li>
+  </ul>
+
+  <div>
+    <ul>
+      <li class="task-item" ng-repeat="task in pendingTasks">
+        <ul class="task small-block-grid-3">
+          <li><a class="task-name" href="#/tasks/{{ task._id }}">{{ task.name }}</a></li>
+          <li><div class="task-deadline">Deadline: {{ task.deadline }}</div></li>
+          <il> <a class="button small" ng-click="completeTask(task)">Complete</a></il>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <ul>
+    <li><a class="button" ng-click="getCompletedTasks()">Show Completed Tasks</a></li>
+  </ul>
+  <ul>
+    <li class="task-item" ng-repeat="task in completedTasks">
+      <ul class="task small-block-grid-2">
+        <li><a class="task-name" href="#/tasks/{{ task._id }}">{{ task.name }}</a></li>
+        <li><div class="task-deadline">Deadline: {{ task.deadline }}</div></li>
+      </ul>
+    </li>
+  </ul>
+</div>

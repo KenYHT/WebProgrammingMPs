@@ -1,0 +1,103 @@
+@import "compass";
+@import "compass/reset";
+
+@import "variables";
+@import "mixins";
+@import "base";
+
+#nav {
+	background-color: $nav-footer-background;
+}
+
+#carousel {
+  height: 710px;
+}
+
+.carousel-img {
+	max-width: 1980px;
+	max-height: 1020px; 
+  min-width: 1240;
+  min-height: 697px;
+}
+
+.social-container {
+	text-align: center;
+}
+
+.social-container {
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 64em) {
+  .social-container {
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+  }
+}
+
+@media (max-width: 40em) {
+  .social-container {
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}
+#social-list {
+	position: relative;
+  text-align: center;
+	@include vertically-center;
+}
+
+
+#sec1-title {
+  @include vertically-center;
+  @include title;
+}
+
+#sec3-title {
+  @include title;
+}
+
+#sec4-title {
+  @include title;
+}
+
+.social-label {
+  font-size: 20px;
+  color: $sunflower;
+}
+
+#trailer-container {
+  @include vertically-center;
+  position: relative;
+  text-align: center;
+}
+
+#video-button {
+  background-color: $nav-footer-background;
+  opacity: 0.9;
+}
+
+#social {
+  @include vertically-center;
+  position: relative !important;
+}
+
+#facts-container {
+  @include vertically-center;
+  text-align: center;
+  position: relative;
+  color: white;
+  opacity: 0.9;
+}
+
+.fact:hover {
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}

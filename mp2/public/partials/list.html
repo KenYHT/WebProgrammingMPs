@@ -1,0 +1,33 @@
+<div id="list-container">
+	<form>
+  <fieldset>
+    <div class="row">
+     <div class="large-12 columns">
+       <label>Sort By
+        <select ng-init="predicate = optionList[0].val" ng-model="predicate" ng-options="option.val as option.name for option in optionList"></select>
+       </label>
+     </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <input type="text" placeholder="Search for movies" ng-model="query" ng-init="false" />
+      </div>
+     </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div id="radio-buttons">
+          <input type="radio" name="order" value="" ng-model="order"><label for="ascending">Ascending</label>
+          <input type="radio" name="order" value="false" ng-model="order"><label for="descending">Descending</label>
+      </div> 
+      </div>
+    </div>
+    </form>
+  </fieldset>
+  <div ng-controller="listController">
+    <div class="list-movie" ng-click="getDetails(movie.rank)" ng-if="query" ng-repeat="movie in movies | filter: query | orderBy: predicate:order" class="reveal-animation">
+      <img class="list-img" src="data/images/{{ movie.imdbID }}.jpg" />
+      <h1>{{ movie.title }}</h1>
+      <p>Rank: {{ movie.rank }}</p>
+    </div>
+  </div>
+</div>

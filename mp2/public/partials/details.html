@@ -1,0 +1,20 @@
+<div ng-controller="detailsController" id="movie-container">
+	<a id="details-left" href="#/movie/{{ prev() }}"><</a>
+	<a id="details-right" href="#/movie/{{ next() }}">></a>
+	<div ng-model="currMovie">
+		<div id="title-container">
+			<h3 id="detail-title">{{ currMovie.title }}</h3>
+			<p id="detail-rank">Rank {{ currMovie.rank }}</p>
+		</div>
+		<div id="detail-img-container">
+			<img id="detail-img" src="data/images/{{ currMovie.imdbID }}.jpg" />
+		</div>
+		<div id="details-container">
+			<p class="details">{{ currMovie.plot }}</p>
+			<p class="details">Released: {{currMovie.released}}</p>
+			<p class="details">Runtime: {{ currMovie.runtime }}</p>
+			<p class="details">Awards: {{ currMovie.awards }}</p>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,50 @@
+@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css');
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: lighten($orange, 25);
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+  background-color: $nav-footer-background;
+  z-index: 2;
+}
+
+#sec1 {
+  height: 500px;
+  padding: 0 20px;
+}
+
+#sec2 {
+  height: 768px;
+  overflow: hidden;
+}
+
+#sec3 {
+  height: 800px;
+}
+
+#sec4 {
+  height: 900px;
+  background-image: url("../data/img/img1_background.jpg");
+  background-attachment: fixed;
+  background-color: transparent;
+  background-size: 100% 100%;
+  text-align: center;
+  position: relative;
+}
+
+section:nth-of-type(2n+1) {
+  background-color: $wet-asphalt;
+}
+
+section:nth-of-type(2n) {
+  background-color: $even-sec-background;
+}

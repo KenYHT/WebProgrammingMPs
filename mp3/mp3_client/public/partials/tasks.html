@@ -1,0 +1,71 @@
+<div class="list" ng-controller='TasksController'>		
+  <div id="task-header">
+    <ul class="small-block-grid-2">
+      <li>
+        <h1 id="task-title">Tasks</h1>
+        <h4 id="task-desc">really really important stuff</h4>
+      </li>
+      <li>
+        <a href="#/addTasks" id="user-add" class="button small">Add Task</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <form>
+      <ul class="small-block-grid-3">
+        <li>
+          <div class="row">
+            <div class="large-12 columns">
+              <div id="radio-buttons">
+                <input type="radio" name="completed "value="true" ng-model="taskType" ng-change="changeFilter()"/><label for="completed">Completed</label>
+                <input type="radio" name="pending" value="false" ng-model="taskType" ng-change="changeFilter()"/><label for="pending">Pending</label>
+                <input type="radio" name="all" value="" ng-model="taskType" ng-change="changeFilter()"/><label for="all">All</label>
+              </div> 
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Sort by:
+                <select ng-model="predicate" ng-change="changeFilter()" ng-options="option.value as option.key for option in sortByOptions"></select>
+              </label>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="radio" name="orderBy" value="1" ng-model="order" id="ascending" ng-change="changeFilter()"><label for="ascending">Ascending</label>
+              <input type="radio" name="orderBy" value="-1" ng-model="order" id="descending" ng-change="changeFilter()"><label for="descending">Descending</label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <div>
+    <ul class="small-block-grid-2">
+      <li><a class="button small" ng-click="prevTasks()">Previous</a></li>
+      <li><a class="button small" ng-click="nextTasks()">Next</a></li>
+    </ul>
+  </div>
+	
+  <div>
+    <ul>
+      <li class="task-item" ng-repeat="task in tasks">
+        <ul class="task small-block-grid-3">
+          <li><a class="task-name" href="#/tasks/{{ task._id }}">{{ task.name }}</a></li>
+          <li>
+            <div class="task-deadline">Deadline: {{ task.deadline }}</div>
+            <div class="task-assigned">Assigned to {{ task.assignedUserName }}</div>
+          </li>
+          <il> <a href="#/tasks" class="button small" ng-click="deleteTask(task._id)">Delete</a></il>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
